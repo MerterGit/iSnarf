@@ -2,6 +2,10 @@
 
 **Rescue your music and playlists from an iPhone or iPad — over USB, no jailbreak, no paid app.**
 
+[![lint](https://github.com/MerterGit/iSnarf/actions/workflows/lint.yml/badge.svg)](https://github.com/MerterGit/iSnarf/actions/workflows/lint.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+
 iSnarf pulls the audio files *and* playlists off an iOS device and either drops
 them into a clean, tagged folder tree or imports them straight into macOS
 **Music.app**. It was built and tested against **iOS 16**.
