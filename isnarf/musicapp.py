@@ -22,7 +22,8 @@ def _esc(s: str) -> str:
 
 
 def _osascript(script: str) -> subprocess.CompletedProcess:
-    return subprocess.run(["osascript", "-e", script], capture_output=True, text=True)
+    return subprocess.run(["osascript", "-e", script], check=False,
+                          capture_output=True, text=True)
 
 
 def _require_macos() -> None:
@@ -40,9 +41,9 @@ def import_playlist(m3u8: Path) -> dict:
     _require_macos()
     name = m3u8.stem
     base = m3u8.parent
-    paths = [os.path.normpath(os.path.join(base, l.strip()))
-             for l in m3u8.read_text(encoding="utf-8").splitlines()
-             if l.strip() and not l.startswith("#")]
+    paths = [os.path.normpath(os.path.join(base, ln.strip()))
+             for ln in m3u8.read_text(encoding="utf-8").splitlines()
+             if ln.strip() and not ln.startswith("#")]
     paths = [p for p in paths if os.path.isfile(p)]
 
     nm = _esc(name)

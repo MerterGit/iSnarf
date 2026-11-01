@@ -25,3 +25,14 @@ isnarf = "isnarf.cli:main"
 
 [tool.setuptools]
 packages = ["isnarf"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+# Catch real bugs (pyflakes/bugbear) + keep imports tidy, without style nits or
+# opinions that clash with intentional design (best-effort except blocks, the
+# Optional[] annotations we keep for Python 3.9 compatibility).
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E501"]

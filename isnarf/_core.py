@@ -40,8 +40,8 @@ warnings.filterwarnings("ignore", message=r".*OpenSSL 1\.1\.1\+")
 warnings.filterwarnings("ignore", message=r"coroutine '.*wait_closed' was never awaited")
 logging.getLogger("asyncio").setLevel(logging.CRITICAL)
 
-from pymobiledevice3.lockdown import create_using_usbmux
-from pymobiledevice3.services.afc import AfcService
+from pymobiledevice3.lockdown import create_using_usbmux  # noqa: E402
+from pymobiledevice3.services.afc import AfcService  # noqa: E402
 
 # AFC (com.apple.afc) is rooted at /var/mobile/Media on the device, so all
 # remote paths below are relative to that media root.

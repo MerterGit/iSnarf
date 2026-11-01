@@ -18,8 +18,8 @@ from pathlib import Path
 
 from . import __version__
 from . import _core as core
-from .organize import cmd_organize
 from .musicapp import cmd_import, cmd_import_playlist
+from .organize import cmd_organize
 
 DEFAULT_WORKDIR = str(Path.home() / ".cache" / "isnarf")
 DEFAULT_OUT = str(Path.home() / "iPhoneMusic")
