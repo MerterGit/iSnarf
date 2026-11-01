@@ -1,0 +1,3 @@
+pymobiledevice3>=11
+mutagen>=1.47
+tqdm>=4.60

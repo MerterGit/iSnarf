@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "isnarf"
+version = "0.1.0"
+description = "Rescue your music and playlists from an iOS device over USB, into files or macOS Music.app."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["ios", "iphone", "music", "playlist", "afc", "pymobiledevice3", "backup"]
+dependencies = [
+    "pymobiledevice3>=11",
+    "mutagen>=1.47",
+    "tqdm>=4.60",
+]
+
+[project.urls]
+Homepage = "https://github.com/mertergit/iSnarf"
+Issues = "https://github.com/mertergit/iSnarf/issues"
+
+[project.scripts]
+isnarf = "isnarf.cli:main"
+
+[tool.setuptools]
+packages = ["isnarf"]
