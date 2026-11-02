@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/iSnarf.jpeg" alt="Painted illustration of a developer at a café table pulling files from a USB-connected iPhone with iSnarf on a laptop" width="100%">
+</p>
+
 # iSnarf 🎵📲
 
 **Rescue your music and playlists from an iPhone or iPad — over USB, no jailbreak, no paid app.**
